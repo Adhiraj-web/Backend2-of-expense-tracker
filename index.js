@@ -5,7 +5,7 @@ const expenseRoutes = require("./routes/expenseRoutes");
 
 const app = express();
 
-mongoose.connect('mongodb://127.0.0.1:27017/test')
+mongoose.connect('mongodb+srv://adhirajpratapsingh079_db_user:wHoGHcd4qfWeamBU@cluster0.vnrp8jl.mongodb.net/')
   .then(() => console.log('connected'));
 
 app.use(cors());

@@ -16,6 +16,9 @@ const addExpense = async (req, res) => {
   }
 };
 
+// adhirajpratapsingh079_db_user
+// wHoGHcd4qfWeamBU
+
 
 // Get All Expenses
 const getExpenses = async (req, res) => {
