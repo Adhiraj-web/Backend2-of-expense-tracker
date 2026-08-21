@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require("express");
 const cors = require("cors");
 const mongoose= require("mongoose");
@@ -5,7 +6,7 @@ const expenseRoutes = require("./routes/expenseRoutes");
 
 const app = express();
 
-mongoose.connect('mongodb+srv://adhirajpratapsingh079_db_user:wHoGHcd4qfWeamBU@cluster0.vnrp8jl.mongodb.net/')
+mongoose.connect(process.env.MONGODB)
   .then(() => console.log('connected'));
 
 app.use(cors());
@@ -20,6 +21,6 @@ app.get("/tasks", (req, res) => {
   res.json([]);
 });
 
-app.listen(2500, () => {
+app.listen(process.env.PORT, () => {
   console.log("connected to server");
 });
